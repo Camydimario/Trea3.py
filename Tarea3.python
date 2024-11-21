@@ -1,0 +1,70 @@
+
+#Cree una funcion que calcule el promedio de N notas
+
+def promedio(notas):
+   return sum(notas) / len(notas)
+
+notas = [4, 5, 7, 10, 8 ,2]
+promedio = promedio(notas)
+print("Promedio:", promedio)
+
+
+#Cree una funcion que determine si un color
+# es primario o no, se debe imprimir 
+# porpantalla la leyenda “el color X es 
+# primero “
+#  o “el color X no es primario”
+
+def colores(color):
+ colores =['rojo', 'azul', 'amarillo',  'verde']
+ if color in colores :
+  print(f"El color {color } es primario ")
+ else :
+  print(f"El color {color } no es primario ")
+
+colores("rojo")
+colores("marron")
+colores("violeta")
+colores("azul")
+
+#Cree una funcion que 
+# determine que numero de una serie de N 
+# numeros es mayor
+
+def numero_es_mayor(numeros):
+  mayor = numeros[0]
+  for numero in numeros:
+    if numero > mayor:
+      mayor = numero
+
+  return mayor
+numeros = [3, 5, 1, 8, 2] 
+numero_es_mayor_resultado = numero_es_mayor(numeros)
+print("El número mayor es:", numero_es_mayor_resultado)
+
+#Cree una funcion que dibuje un rectangulo de X filas
+# y X columnas determinadas por elusuario
+
+def dibujar_rectangulo(filas, columnas):
+  for i in range(filas):
+    print('0' * columnas)
+    
+filas = int(input("Ingrese el número de filas: "))
+columnas = int(input("Ingrese el número de columnas: "))
+dibujar_rectangulo(filas, columnas)
+
+#Cree una funcion que calcule el
+#  Factorial de un numero entero positivo
+
+def factorial(numero):
+  if numero == 0:
+    return 1
+  resultado = 1
+    # Calculamos el factorial
+  for i in range(1, numero + 1):
+    resultado *= i
+  return resultado
+
+numero = int(input("Ingrese el numero: "))
+factorial_resultado = factorial(numero)    
+print(f"El factorial de {numero} es: {factorial_resultado}")
