@@ -1,0 +1,65 @@
+# 1) Calcular el mayor de dos números ingresados por teclado usando un operadorternario
+
+Numero_1 = int (input ("Ingrese el numero: "))
+Numero_2 = int (input ("Ingrese el numero: "))
+
+if(Numero_1> Numero_2) :
+    print("El mayor es ", Numero_1)
+else: 
+    print ("El mayor es ", Numero_2)
+
+#Con ternario :
+Numero_1 = int (input ("Ingrese el numero: "))
+Numero_2 = int (input ("Ingrese el numero: "))
+print("el numero mayor es : " , Numero_1 if Numero_1 > Numero_2 else Numero_2)
+
+
+#2) Buscar una palabra en una lista ingresada por teclado 
+# usando args y un operadorternario
+Palabra= input ("Ingrese  la palabra: ")
+def Lista (*args):
+    print ("Palabras de la lista", args)
+    print("La Palabra esta en la lista " if Palabra in args else "La Palabra no esta en la lista" )
+resultado = Lista('pepino', 'lechuga', 'tomate','cebolla','zapallo', 'zanahoria')
+
+
+#3 ) Determinar si un número es par o impar
+Numero_1 = int (input ("Ingrese el numero: "))
+if(Numero_1 % 2 ==0):
+    print ("el Numero es Par")
+else :
+   print ( "el Numero es Impar")
+
+#con ternario:
+
+Numero_1 = int (input ("Ingrese el numero: "))
+print("el Numero es Par " if Numero_1 %2 == 0 else "Es impar")
+
+
+# 4) Calcular el promedio de una lista de números usando args y un operador ternario
+def Promedio(*args):
+    return sum(args) / len(args) if args else 0
+resultado = Promedio(10, 20, 30, 40, 50,60,70,80,90)
+print(f"El promedio es: {resultado}")
+
+
+
+# 5) # Imprimir un mensaje de error si no se pasan suficientes argumentos
+
+def mensaje_error(*args):
+    if len(args) < 5:
+        print("Error: No se pasaron suficientes argumentos") 
+    else :
+        print ( "Se pasaron suficientes argumentos")
+       
+resultado = mensaje_error('Casa','Techo','Piso')
+
+#Ahora hacemos que si se cumpla :
+
+def mensaje_error(*args):
+    if len(args) < 5:
+        print("Error: No se pasaron suficientes argumentos") 
+    else :
+        print ( "se pasaron suficientes argumentos")
+       
+resultado = mensaje_error('Casa','Techo','Piso','Puerta','Ventana')
