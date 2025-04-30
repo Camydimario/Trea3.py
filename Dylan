@@ -1,0 +1,7 @@
+#Dale play al codigo 
+
+actual = 22
+edad = int(input("Ingrese la edad de hoy: "))
+if(edad > actual ):
+    print ("¡¡¡Feliz Cumpleaños Pendejo!!!")
+else :  print ("Sigues igual de burro")
